@@ -29,7 +29,7 @@
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-<link href="${css}/bootstrap.readable-theme.css" rel="stylesheet">
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -64,6 +64,11 @@
 			<!-- Load only when user clicks on Contact -->
 			<c:if test="${ userClickContact == true }">
 				<%@include file="contact.jsp"%>
+			</c:if>
+			
+			<!-- Load only when user clicks on list Products -->
+			<c:if test="${ userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 
