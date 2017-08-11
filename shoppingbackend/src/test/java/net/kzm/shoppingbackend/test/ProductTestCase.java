@@ -6,8 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import net.kzn.shoppingbackend.dao.ProductDAO;
-import net.kzn.shoppingbackend.dto.Product;
+import net.kzm.shoppingbackend.dao.ProductDAO;
+import net.kzm.shoppingbackend.dto.Product;
 
 public class ProductTestCase {
 	
@@ -20,7 +20,7 @@ public class ProductTestCase {
 	@BeforeClass
 	public static void init() {
 		context = new AnnotationConfigApplicationContext();
-		context.scan("net.kzn.shoppingbackend");
+		context.scan("net.kzm.shoppingbackend");
 		context.refresh();
 		productDAO = (ProductDAO) context.getBean("productDAO");
 	}

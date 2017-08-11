@@ -54,31 +54,20 @@
 
 		<!-- Page Content -->
 		<div class="content">
-			<!-- Loading Home Content -->
-			<c:if test="${ userClickHome == true }">
-				<%@include file="home.jsp"%>
-			</c:if>
-
-			<!-- Load only when user clicks on About -->
-			<c:if test="${ userClickAbout == true }">
-				<%@include file="about.jsp"%>
-			</c:if>
-
-
-			<!-- Load only when user clicks on Contact -->
-			<c:if test="${ userClickContact == true }">
-				<%@include file="contact.jsp"%>
-			</c:if>
-			
-			<!-- Load only when user clicks on list Products -->
-			<c:if test="${ userClickAllProducts == true or userClickCategoryProducts == true}">
-				<%@include file="listProducts.jsp"%>
-			</c:if>
-			
-			<!-- Load only when user clicks on show Product -->
-			<c:if test="${ userClickShowProduct == true}">
-				<%@include file="singleProduct.jsp"%>
-			</c:if>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="jumbotron">
+							<h1>${errorTitle}</h1>
+							<hr />
+							
+							<blockquote style="word-wrap:break-word">
+								${errorDescription}
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Footer section -->

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import net.kzn.shoppingbackend.dao.ProductDAO;
-import net.kzn.shoppingbackend.dto.Product;
+import net.kzm.shoppingbackend.dao.ProductDAO;
+import net.kzm.shoppingbackend.dto.Product;
 
 @Controller
 @RequestMapping("/json/data")

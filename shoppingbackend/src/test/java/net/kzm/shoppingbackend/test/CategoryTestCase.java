@@ -6,8 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import net.kzn.shoppingbackend.dao.CategoryDAO;
-import net.kzn.shoppingbackend.dto.Category;
+import net.kzm.shoppingbackend.dao.CategoryDAO;
+import net.kzm.shoppingbackend.dto.Category;
 
 public class CategoryTestCase {
 	
@@ -18,7 +18,7 @@ public class CategoryTestCase {
 	@BeforeClass
 	public static void init() {
 		context = new AnnotationConfigApplicationContext();
-		context.scan("net.kzn.shoppingbackend");
+		context.scan("net.kzm.shoppingbackend");
 		context.refresh();
 		categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
 	}

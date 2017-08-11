@@ -1,8 +1,8 @@
-package net.kzn.shoppingbackend.dao;
+package net.kzm.shoppingbackend.dao;
 
 import java.util.List;
 
-import net.kzn.shoppingbackend.dto.Product;
+import net.kzm.shoppingbackend.dto.Product;
 
 public interface ProductDAO {
 

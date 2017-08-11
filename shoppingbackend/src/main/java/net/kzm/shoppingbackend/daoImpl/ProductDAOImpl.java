@@ -1,4 +1,4 @@
-package net.kzn.shoppingbackend.daoImpl;
+package net.kzm.shoppingbackend.daoImpl;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import net.kzn.shoppingbackend.dao.ProductDAO;
-import net.kzn.shoppingbackend.dto.Product;
+import net.kzm.shoppingbackend.dao.ProductDAO;
+import net.kzm.shoppingbackend.dto.Product;
 
 @Repository("productDAO")
 @Transactional

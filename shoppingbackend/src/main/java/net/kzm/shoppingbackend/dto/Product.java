@@ -1,4 +1,4 @@
-package net.kzn.shoppingbackend.dto;
+package net.kzm.shoppingbackend.dto;
 
 import java.util.UUID;
 

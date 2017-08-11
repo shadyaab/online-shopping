@@ -1,4 +1,4 @@
-package net.kzn.shoppingbackend.config;
+package net.kzm.shoppingbackend.config;
 
 import java.util.Properties;
 
@@ -42,7 +42,7 @@ public class HibernateConfig {
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		builder.addProperties(getHibernateProperties());
-		builder.scanPackages("net.kzn.shoppingbackend.dto");
+		builder.scanPackages("net.kzm.shoppingbackend.dto");
 		return builder.buildSessionFactory();
 	}
 	
