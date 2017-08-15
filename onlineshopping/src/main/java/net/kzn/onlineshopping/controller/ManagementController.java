@@ -2,6 +2,7 @@ package net.kzn.onlineshopping.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +55,7 @@ public class ManagementController {
 	 * Returning categories for all the request mapping inside this controller
 	 * */
 	@ModelAttribute("categories")
-	public List<Category> getCategoried(){
+	public List<Category> getCategories(){
 		return categoryDAO.list();		
 	}
 	
@@ -62,7 +63,8 @@ public class ManagementController {
 	 * Handling product submission
 	 */
 	@RequestMapping(value="/products", method = RequestMethod.POST)
-	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, Model model) {
+	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult results, 
+			Model model, HttpServletRequest request) {
 		
 		//Check if there are any errors
 		if(results.hasErrors()) {

@@ -10,7 +10,8 @@
 				</div>
 			</div>
 		</c:if>
-		
+	</div>
+	<div class="row">	
 		<div class="col-md-offset-2 col-md-8">
 		
 			<div class="panel panel-primary">
@@ -20,7 +21,8 @@
 				
 				<div class="panel-body">
 					<!-- Form Element -->
-					<sf:form class="form-horizontal" modelAttribute="product" action="${contextRoot}/manage/products" method="POST">
+					<sf:form class="form-horizontal" modelAttribute="product" action="${contextRoot}/manage/products" 
+										method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<label class="control-label col-md-4" for="name">Enter Product Name : </label>
 							<div class="col-md-8">
@@ -57,7 +59,14 @@
 							<label class="control-label col-md-4" for="quantity">Quantity : </label>
 							<div class="col-md-8">
 								<sf:input type="number" path="quantity" placeholder="Quantity Available" id="quantity" class="form-control"/>
-			
+							</div>
+						</div>
+						
+						<!--  File element for image upload -->
+						<div class="form-group">
+							<label class="control-label col-md-4" for="quantity">Select a file : </label>
+							<div class="col-md-8">
+								<sf:input type="file" path="file" id="file" class="form-control"/>
 							</div>
 						</div>
 						
@@ -92,4 +101,57 @@
 		
 		</div>
 	</div>
+
+	<div class="row">
+	
+		<div class="col-xs-12">
+			<h3>Available Products</h3>
+			<hr />
+		</div>
+		
+		<div class="col-xs-12">
+			<div style="overflow:auto">
+				<table id="adminProductTable" class="table table-stripeed table-bordered">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>&#160;</th>
+							<th>Name</th>
+							<th>Quantity</th>
+							<th>unit Price</th>
+							<th>Active</th>
+							<th>Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</div>
+		</div>
+		
+	</div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

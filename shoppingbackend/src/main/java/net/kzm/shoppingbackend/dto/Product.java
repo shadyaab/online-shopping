@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -50,6 +48,7 @@ public class Product {
 	private int supplierId;
 	private int purchases;
 	private int views;
+	
 	
 	//Default Constructor
 	public Product() {
